@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Расписание</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <main class="screen">
+    <!-- Шапка: месяц + дни недели -->
+    <section class="header-card" aria-labelledby="month-title">
+      <h1 id="month-title" class="month-title">Название месяца</h1>
+
+      <nav class="weekdays" aria-label="Дни недели">
+        <button type="button" class="weekday" data-day="mon">понедельник</button>
+        <button type="button" class="weekday" data-day="tue">вторник</button>
+        <button type="button" class="weekday" data-day="wed">среда</button>
+        <button type="button" class="weekday" data-day="thu">четверг</button>
+        <button type="button" class="weekday" data-day="fri">пятница</button>
+        <button type="button" class="weekday" data-day="sat">суббота</button>
+        <button type="button" class="weekday" data-day="sun">воскресенье</button>
+      </nav>
+
+      <div class="weekday-indicator" id="weekdayIndicator" aria-hidden="true"></div>
+
+      <div class="weekday-circles" id="weekdayCircles">
+        <button type="button" class="circle" data-day="mon" aria-label="Выбрать понедельник"></button>
+        <button type="button" class="circle" data-day="tue" aria-label="Выбрать вторник"></button>
+        <button type="button" class="circle" data-day="wed" aria-label="Выбрать среду"></button>
+        <button type="button" class="circle" data-day="thu" aria-label="Выбрать четверг"></button>
+        <button type="button" class="circle" data-day="fri" aria-label="Выбрать пятницу"></button>
+        <button type="button" class="circle" data-day="sat" aria-label="Выбрать субботу"></button>
+        <button type="button" class="circle" data-day="sun" aria-label="Выбрать воскресенье"></button>
+      </div>
+
+      <img class="header-line" src="img/vector-1.svg" alt="" aria-hidden="true">
+    </section>
+
+    <!-- Расписание -->
+    <section aria-labelledby="schedule-title">
+      <h2 id="schedule-title" class="panel-title panel-title--schedule">Расписание</h2>
+      <div class="panel panel--schedule" aria-label="Расписание на выбранный день">
+        <ul class="time_list" id="timeList"></ul>
+      </div>
+    </section>
+
+    <!-- Задачи -->
+    <section aria-labelledby="tasks-title">
+      <h2 id="tasks-title" class="panel-title panel-title--tasks">Задачи</h2>
+      <div class="panel panel--tasks" aria-label="Список задач">
+        <ul class="hard_tasks" id="hardList"></ul>
+        <ul class="light_tasks" id="taskList"></ul>
+      </div>
+    </section>
+
+    <!-- Форма добавления -->
+    <form class="add-form" id="addForm" aria-label="Добавить задачу">
+      <label class="sr-only" for="task-input">Новая задача</label>
+      <div class="add-form__input-wrap">
+        <input id="task-input" type="text" placeholder="Добавить задачу...">
+      </div>
+      <button type="submit" class="add-form__btn" aria-label="Добавить задачу"></button>
+    </form>
+
+    <!-- Декор -->
+    <img class="decor decor--vector2" src="img/vector-2.svg" alt="" aria-hidden="true">
+    <img class="decor" src="img/star-1.svg" alt="" style="top:537px;left:606px;width:25px;height:26px" aria-hidden="true">
+    <img class="decor" src="img/star-8.svg" alt="" style="top:389px;left:1071px;width:25px;height:26px" aria-hidden="true">
+    <img class="decor" src="img/star-2.svg" alt="" style="top:537px;left:733px;width:25px;height:26px" aria-hidden="true">
+    <img class="decor" src="img/star-3.svg" alt="" style="top:537px;left:847px;width:25px;height:26px" aria-hidden="true">
+    <img class="decor" src="img/star-4.svg" alt="" style="top:536px;left:976px;width:26px;height:25px" aria-hidden="true">
+    <img class="decor" src="img/star-5.svg" alt="" style="top:485px;left:1074px;width:25px;height:26px" aria-hidden="true">
+    <img class="decor" src="img/star-7.svg" alt="" style="top:294px;left:1073px;width:26px;height:26px" aria-hidden="true">
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
